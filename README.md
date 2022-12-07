@@ -1,7 +1,3 @@
----
-marp: true
----
-
 # Framework Front-End I - Angular
 
 ## O que é?
