@@ -1,5 +1,5 @@
 import { AddressSectionData } from './../../models/address-section-data.model';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { AddressData } from 'src/app/models/address-data.model';
 
 @Component({
@@ -10,6 +10,8 @@ import { AddressData } from 'src/app/models/address-data.model';
 export class AddressComponent implements OnInit {
 
   @Input() addressData!: AddressSectionData;
+  @Output() public elementCreated: EventEmitter<string> = new EventEmitter<string>();
+
 
   // public addressData: AddressData = {
   //   street: "Rua Luiz Galvez",
@@ -24,6 +26,7 @@ export class AddressComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.elementCreated.emit('Adress');
   }
 
 }
