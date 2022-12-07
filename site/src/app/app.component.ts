@@ -59,4 +59,8 @@ export class AppComponent {
     console.log("Formulário enviado com sucesso!", formData);
   }
 
+  onSearchClicked(searchString:string ):void{
+    alert("Usuario pesquisou =>" + searchString);
+    console.log("Dentro do App.component.ts "+"Usuario pesquisou =>" + searchString)
+  }
 }
